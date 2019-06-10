@@ -5,6 +5,7 @@ function workPlanFunc()
 	}
 	else if(document.getElementById('heavy').checked == true) {
   	document.bioform.action ="lightworkoutplan.html";
+  	//
 	}
 	return true;
 }
