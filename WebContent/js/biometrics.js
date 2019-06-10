@@ -11,7 +11,7 @@ function workPlanFunc()
 }
 
 
-//Using button
+//Using button for result
 
 function idealWeight()
 {
