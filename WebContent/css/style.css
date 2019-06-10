@@ -1,0 +1,108 @@
+body{
+	margin: 0;
+	padding: 0;
+	margin-top: 500px;
+	margin-left: 80px;
+	background:url('../images/2.jpg') no-repeat center center fixed;
+	background-color: rgb(0,0,0); 
+	background-color: rgba(0,0,0, 5);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+  	background-size: cover;
+  	z-index: 5;
+	background-blend-mode: darken;
+	background-position: 50% 50%;
+}
+
+.wrapper1{
+	width: 800px;
+	margin-top: 100px;
+	margin-left: 100px;
+
+}
+
+.wrapper1 h1{
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 40px;
+	color: #C8C8C8;
+}
+
+.wrapper1 h2{
+	text-align: left;
+	font-size: 20px;
+	color: #FFF;
+}
+
+.line{
+	height: 25px;
+	min-width: 500px;
+	margin: 0 auto 10px;
+	line-height: 30px;
+	font-size: 25px;
+	color: #000;
+	padding: 0 0 0 10px;
+	position: relative;
+}
+
+.line:before{
+	content: ' ';
+	width: 100%;
+	position: absolute;
+	left: 0;
+	height: 30px;
+	top: 0;
+	z-index: -2;
+	background: #A4A4A4;
+}
+
+.line:after{
+	content: '';
+	background: #DAF7A6;
+	height: 30px;
+	transition: 0.2s;
+	display: block;
+	width: 100%;
+	animation: animate 1 15s;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.line1:after{
+	max-width: 80%;
+}
+
+.line2:after{
+	max-width: 75%;
+}
+
+.line3:after{
+	max-width: 60%;
+}
+
+.line4:after{
+	max-width: 75%;
+}
+
+.line5:after{
+	max-width: 50%;
+}
+.home{
+	font-size: 20px;
+}
+
+
+@keyframes animate{
+
+	0%{
+		width: 0;
+	}
+
+	100%{
+		width: 100%;
+	}
+
+}
