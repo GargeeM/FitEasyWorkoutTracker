@@ -48,17 +48,17 @@ function idealWeight()
 	{
 		if(weight > ibw)
 		{
-			var res = "Ideal body weight according to your height is "+ibw+" kgs <br> You need to lose "+(weight - ibw)+" kgs to reach ideal weight";
+			var res = "Ideal weight = "+ibw+" kgs <br> You need to lose "+(weight - ibw)+" kgs to reach ideal weight";
 			return res;
 		}
 		else if(weight < ibw)
 		{
-			var res = "Ideal body weight according to your height is "+ibw+" kgs <br> You need to gain "+(ibw - weight)+" kgs to reach ideal weight";
+			var res = "Ideal weight = "+ibw+" kgs <br> You need to gain "+(ibw - weight)+" kgs to reach ideal weight";
 			return res;
 		}
 		else if(weight = ibw)
 		{
-			var res = "Ideal body weight according to your height is "+ibw+" kgs <br> You have reached your ideal body weight ! Workout regularly to maintain it !";
+			var res = "Ideal weight = "+ibw+" kgs <br> You have reached your ideal body weight ! Workout regularly to maintain it !";
 			return res;
 		}
 	
