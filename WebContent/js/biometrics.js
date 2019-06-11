@@ -11,7 +11,7 @@ function workPlanFunc()
 }
 
 
-//Using button
+//Using button for result
 
 function idealWeight()
 {
@@ -44,25 +44,28 @@ function idealWeight()
 	}
 
 
-function result(ibw , weight)
-{
-	if(weight > ibw)
+	function result(ibw , weight)
 	{
-		var res = "You need to lose "+(weight - ibw)+" kgs to reach ideal weight";
-		return res;
-	}
-	else if(weight < ibw)
-	{
-		var res = "You need to gain "+(ibw - weight)+" kgs to reach ideal weight";
-		return res;
-	}
-	else if(weight = ibw)
-	{
-		var res = "You have reached your ideal body weight ! Workout regularly to maintain it !";
-		return res;
+		if(weight > ibw)
+		{
+			var res = "Ideal body weight according to your height is "+ibw+" kgs <br> You need to lose "+(weight - ibw)+" kgs to reach ideal weight";
+			return res;
+		}
+		else if(weight < ibw)
+		{
+			var res = "Ideal body weight according to your height is "+ibw+" kgs <br> You need to gain "+(ibw - weight)+" kgs to reach ideal weight";
+			return res;
+		}
+		else if(weight = ibw)
+		{
+			var res = "Ideal body weight according to your height is "+ibw+" kgs <br> You have reached your ideal body weight ! Workout regularly to maintain it !";
+			return res;
+		}
+	
 	}
 }
-}
+
+
 
 
 
