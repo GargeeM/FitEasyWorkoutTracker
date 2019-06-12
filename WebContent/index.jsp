@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+<%@page import="com.ibm.controller.WTDao"%>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -14,6 +15,14 @@
  <link rel="stylesheet" type="text/css" href="css/LoginH.css">
 </head>
 <body>
+
+  <% 
+  session.invalidate();
+  
+  %>
+  <%!
+	WTDao dao = new WTDao();
+%>
   <nav class="shift">
     <ul>
       <li><a href="#">About Us</a></li>
@@ -21,7 +30,7 @@
     </ul>
   </nav> 
 	<br><br><h3 style="text-align:center; color: #ffffff">Welcome to FitEasy!</h3>
-    <h5 style="text-align:center; color: #ffffff">Your one stop solution to Ftiness</h5>
+    <h5 style="text-align:center; color: #ffffff">Your one stop solution to Fitness</h5>
   <div class="container">
    <div class="d-flex justify-content-center h-100">
     <div class="card bg-light">
@@ -53,22 +62,22 @@
     <button id="btn3" style="width:50%; margin: auto">Sign Up</button>
 
     <div id="id02" class="modal">
-      <form class="modal-content animate" action="biometrics.html">
+      <form class="modal-content animate" action="signup" method = "post">
         <div class="container">
           <h2>Sign Up</h2>
           <p>Please fill in this form to create an account.</p>
           <hr>
-          <label for="email"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="Username" required>
+          <label for="userName"><b>Name</b></label>
+          <input type="text" placeholder="Enter Username" name="UserName" id = "userName" required>
 
           <label for="email"><b>Email</b></label>
-          <input type="email" placeholder="Enter Email" name="email" required>
+          <input type="email" placeholder="Enter Email" name="email" id = "email" required>
 
-          <label for="email"><b>Mobileno</b></label>
-          <input type="text" placeholder="Enter Mobileno" name="Mobileno" required>
+          <label for="contact"><b>Contact No.</b></label>
+          <input type="text" placeholder="Enter Contact Number" name="contact" id = "contact" required>
 
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <label for="password"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" id = "password" required>
 
           <label for="psw-repeat"><b>Repeat Password</b></label>
           <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
@@ -81,7 +90,7 @@
 
           <div class="clearfix">
             <button id="btn4" type="button" class="cancelbtn">Cancel</button>
-            <button type="submit" class="cancelbtn">submit</button>
+            <button type="submit" class="cancelbtn">Submit</button>
           </div>
         </div>
       </form>
