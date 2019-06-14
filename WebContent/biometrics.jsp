@@ -4,7 +4,9 @@ java.sql.DriverManager,
 java.sql.PreparedStatement,
 java.sql.ResultSet,
 java.sql.SQLException,
-java.util.*"%>
+java.util.*,
+com.ibm.controller.WTDao
+"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -94,49 +96,7 @@ java.util.*"%>
     </div>
 </div>
 
-<%
-double height = Double.parseDouble(request.getParameter("height"));
-double weight = Double.parseDouble(request.getParameter("weight"));
-int age = Integer.parseInt(request.getParameter("age"));
-String email = "srghytr@gmail.com";//request.getParameter("email");
-String gender = request.getParameter("gender");
-
-
-if(height != 0 && weight != 0 && age != 0 && gender != null){
-
-try{
-
-	Class.forName("com.mysql.jdbc.Driver");
-
-	Connection dbCon = DriverManager.getConnection("jdbc:mysql://localhost:3306/workout_tracker", "root", "");
-	PreparedStatement theStatement;
-	
-	String insertQry = "INSERT INTO `user_biometrics`(`email`, `gender`, `height`, `weight`, `age`) VALUES (?,?,?,?,?)";
-            	      
-            theStatement = dbCon.prepareStatement(insertQry);
-            theStatement.setString(1, email);
-			theStatement.setString(2, gender);
-			theStatement.setDouble(3, height);
-			theStatement.setDouble(3, weight);
-			theStatement.setDouble(3, age);
-			//Execute the query
-			if(theStatement.executeUpdate() > 0) {
-				System.out.println("User details inserted...");
-			}
-			else
-			{
-				System.out.println("Some issues...");
-			}
-            } 
-            catch (Exception ex) {
-            out.println("Unable to connect to database.");
- 			}
-            /* finally {
-            // close all the connections.
-            theStatement.close();
-            dbCon.close();
-            } */
-            }%>
+<!-- jsp was here -->
 
 <div class="card border-0" id="card2">
     <div class="col-sm-12 card-body"> 

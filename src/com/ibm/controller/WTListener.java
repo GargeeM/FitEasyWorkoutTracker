@@ -36,6 +36,7 @@ public class WTListener implements ServletContextListener, ServletContextAttribu
      */
     public void sessionCreated(HttpSessionEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("Session is created...");
     }
 
 	/**
@@ -43,6 +44,7 @@ public class WTListener implements ServletContextListener, ServletContextAttribu
      */
     public void attributeRemoved(ServletContextAttributeEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("attrib is removed...");
     }
 
 	/**
@@ -64,6 +66,7 @@ public class WTListener implements ServletContextListener, ServletContextAttribu
      */
     public void attributeAdded(ServletRequestAttributeEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("attrib is added...");
     }
 
 	/**
@@ -92,6 +95,7 @@ public class WTListener implements ServletContextListener, ServletContextAttribu
      */
     public void contextInitialized(ServletContextEvent arg0)  { 
     	try {
+    		System.out.println("Context is init...");
 			Class.forName("com.mysql.jdbc.Driver");
 			dbCon = DriverManager.getConnection("jdbc:mysql://localhost:3306/workout_tracker", "root", "");
 			arg0.getServletContext().setAttribute("dbCon", dbCon);
@@ -105,6 +109,7 @@ public class WTListener implements ServletContextListener, ServletContextAttribu
      */
     public void attributeAdded(ServletContextAttributeEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("attrib is added...");
     }
 
 	/**
@@ -126,6 +131,7 @@ public class WTListener implements ServletContextListener, ServletContextAttribu
      */
     public void attributeRemoved(ServletRequestAttributeEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("attrib is removed...");
     }
 
 	/**
@@ -147,6 +153,7 @@ public class WTListener implements ServletContextListener, ServletContextAttribu
      */
     public void requestInitialized(ServletRequestEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("request is init...");
     }
 
 	/**
@@ -154,6 +161,7 @@ public class WTListener implements ServletContextListener, ServletContextAttribu
      */
     public void sessionDestroyed(HttpSessionEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("Session is destroyed...");
     }
 
 	/**
@@ -168,6 +176,7 @@ public class WTListener implements ServletContextListener, ServletContextAttribu
      */
     public void contextDestroyed(ServletContextEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("Context is destroyed...");
     }
 
 	/**
@@ -182,6 +191,7 @@ public class WTListener implements ServletContextListener, ServletContextAttribu
      */
     public void attributeAdded(HttpSessionBindingEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("Attrib is added...");
     }
 
 	/**
@@ -189,6 +199,7 @@ public class WTListener implements ServletContextListener, ServletContextAttribu
      */
     public void attributeRemoved(HttpSessionBindingEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("attrib is removed...");
     }
 
 	/**

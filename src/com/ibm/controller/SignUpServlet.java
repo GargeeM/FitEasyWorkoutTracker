@@ -16,7 +16,7 @@ public class SignUpServlet extends HttpServlet {
 	
 	    @Override
 		protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-			dao.createUser(request, response, context);
+			dao.createUser(req, resp, getServletContext());
 	}
 	
 }
