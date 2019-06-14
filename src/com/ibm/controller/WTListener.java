@@ -35,7 +35,7 @@ public class WTListener implements ServletContextListener, ServletContextAttribu
      * @see HttpSessionListener#sessionCreated(HttpSessionEvent)
      */
     public void sessionCreated(HttpSessionEvent arg0)  { 
-         // TODO Auto-generated method stub
+        
     }
 
 	/**
@@ -93,7 +93,7 @@ public class WTListener implements ServletContextListener, ServletContextAttribu
     public void contextInitialized(ServletContextEvent arg0)  { 
     	try {
 			Class.forName("com.mysql.jdbc.Driver");
-			dbCon = DriverManager.getConnection("jdbc:mysql://localhost:3306/workout_tracker", "root", "");
+			dbCon = DriverManager.getConnection("jdbc:mysql://localhost:3306/workouttrack", "root", "");
 			arg0.getServletContext().setAttribute("dbCon", dbCon);
 		} catch (ClassNotFoundException | SQLException e) {
 			System.out.println("Some issues found: " + e);
