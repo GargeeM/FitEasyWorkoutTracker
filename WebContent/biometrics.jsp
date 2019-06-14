@@ -1,5 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@page import="java.sql.Connection,
+java.sql.DriverManager,
+java.sql.PreparedStatement,
+java.sql.ResultSet,
+java.sql.SQLException,
+java.util.*,
+com.ibm.controller.WTDao
+"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +17,7 @@
     
   <link rel="stylesheet" type="text/css" href="css/biometrics.css">
 </head>
+
 <body background="">
 
 
@@ -87,6 +95,8 @@
       
     </div>
 </div>
+
+<!-- jsp was here -->
 
 <div class="card border-0" id="card2">
     <div class="col-sm-12 card-body"> 

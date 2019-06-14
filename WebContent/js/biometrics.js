@@ -1,10 +1,10 @@
 function workPlanFunc()
 {
 	if(document.getElementById('light').checked == true) {
-  	document.bioform.action ="lightworkoutplan.html";
+  	document.bioform.action ="bioservlet";
 	}
 	else if(document.getElementById('heavy').checked == true) {
-  	document.bioform.action ="lightworkoutplan.html";
+  	document.bioform.action ="bioservlet";
   	//
 	}
 	return true;
